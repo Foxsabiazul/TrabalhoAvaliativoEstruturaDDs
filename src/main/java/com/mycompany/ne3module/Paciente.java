@@ -10,29 +10,32 @@ import java.util.Scanner;
  *
  * @author marco
  */
+
+//class paciente
 class Paciente {
-    private static int contador1 = 1 ;
+    private static int contador = 1 ;
     Scanner sc = new Scanner(System.in);
     
+    //variables
     int id;
     String nome;
     int idade;
     String sintoma;
     
+    //constructor and paramaters
     public Paciente(String nome, int idade, String sintoma){
-     this.id = contador1++;
+     this.id = contador++;
      this.nome = nome;
      this.idade = idade;
      this.sintoma = sintoma;
     }
-    
+    //getters  
     public int getId(){
         return id;
 }
     public String getNome(){
         return nome;
 }
-    
     public int getIdade(){
         return idade;
 }
@@ -40,17 +43,20 @@ class Paciente {
 public String getSintoma(){
     return sintoma;
 }
-
+    //setters
     public void setNome(String nome) {
         this.nome = nome;
+        
     }
     
     public void setIdade(int idade) {
         this.idade = idade;
+        
     }
 
     public void setSintoma(String sintoma) {
         this.sintoma = sintoma;
+        
     }
 }
 
