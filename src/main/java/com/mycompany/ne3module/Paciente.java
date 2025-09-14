@@ -4,8 +4,6 @@
  */
 package com.mycompany.ne3module;
 
-import java.util.Scanner;
-
 /**
  *
  * @author marco
@@ -14,7 +12,6 @@ import java.util.Scanner;
 //class paciente
 class Paciente {
     private static int contador = 1 ;
-    Scanner sc = new Scanner(System.in);
     
     //variables
     int id;
@@ -23,11 +20,11 @@ class Paciente {
     String sintoma;
     
     //constructor and paramaters
-    public Paciente(String nome, int idade, String sintoma){
+    public Paciente(String nome, int idade, String sintomas){
      this.id = contador++;
      this.nome = nome;
      this.idade = idade;
-     this.sintoma = sintoma;
+     this.sintoma = sintomas;
     }
     //getters  
     public int getId(){
@@ -64,8 +61,9 @@ public String getSintoma(){
     public void exibirInfo(){
         System.out.println("id" + id);
         System.out.println("nome" + nome);
-        System.out.println("iadade" + idade);
+        System.out.println("idade" + idade);
         System.out.println("sintomas" + sintoma);
+         System.out.println("----------------------");
     }
 }
 

@@ -22,7 +22,7 @@ public class HistoricoAtendimentos {
         historico.push(p);
     }
 
-    // retirna o último paciente atendid sem remover
+    // retorna o último paciente atendid sem remover
     public Paciente verUltimoAtendido() {
         if (!historico.isEmpty()) {
             return historico.peek();

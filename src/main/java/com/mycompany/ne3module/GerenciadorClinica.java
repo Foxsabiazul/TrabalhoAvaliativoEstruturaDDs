@@ -3,6 +3,11 @@ package com.mycompany.ne3module;
 import java.util.Scanner;
 
 public class GerenciadorClinica {
+
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         FiladeAtendimento fila = new FiladeAtendimento();
@@ -19,17 +24,18 @@ public class GerenciadorClinica {
             System.out.println("5 - Mostrar histórico de atendimentos");
             System.out.println("6 - Sair");
             System.out.print("Escolha uma opção: ");
+            
 
             int opcao;
             if (sc.hasNextInt()) {
                 opcao = sc.nextInt();
-                sc.nextLine(); 
+                sc.nextLine();
             } else {
                 System.out.println("Entrada inválida! Digite um número de 1 a 6.");
                 sc.nextLine();
                 continue;
             }
-
+            
             if (opcao == 1) {
                 System.out.print("Nome do paciente: ");
                 String nome = sc.nextLine();
@@ -54,7 +60,6 @@ public class GerenciadorClinica {
                 Paciente paciente = new Paciente(nome, idade, sintoma);
                 fila.adicionarPaciente(paciente);
                 System.out.println("Paciente adicionado à fila.");
-
             } else if (opcao == 2) {
                 Paciente atendido = fila.atenderPaciente();
                 if (atendido != null) {
@@ -64,10 +69,8 @@ public class GerenciadorClinica {
                 } else {
                     System.out.println("A fila está vazia!");
                 }
-
             } else if (opcao == 3) {
                 fila.mostrarFila();
-
             } else if (opcao == 4) {
                 Paciente ultimo = historico.verUltimoAtendido();
                 if (ultimo != null) {
@@ -76,19 +79,14 @@ public class GerenciadorClinica {
                 } else {
                     System.out.println("Nenhum paciente atendido ainda!");
                 }
-
             } else if (opcao == 5) {
                 historico.mostrarHistorico();
-
             } else if (opcao == 6) {
                 System.out.println("Encerrando o programa...");
                 sair = true;
-
             } else {
                 System.out.println("Opção inválida! Digite um número de 1 a 6.");
             }
         }
-
-        sc.close();
     }
 }

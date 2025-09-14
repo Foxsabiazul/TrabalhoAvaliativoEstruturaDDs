@@ -9,6 +9,7 @@ package com.mycompany.ne3module;
  *
  * @author marco
  */
+
 public class Main {
     public static void main(String[] args) {
     
@@ -23,10 +24,10 @@ public class Main {
           fila.adicionarPaciente(p1);
         fila.adicionarPaciente(p2);
 
-        // Mostrando a fila
+        // mostrando a fila
         fila.mostrarFila();
 
-        // Atendendo paciente
+        // atendendo paciente
         Paciente atendido = fila.atenderPaciente();
         if (atendido != null) {
             System.out.println("\nPaciente atendido:  ");
