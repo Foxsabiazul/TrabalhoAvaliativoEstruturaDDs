@@ -4,7 +4,6 @@
 
 package com.mycompany.ne3module;
 
-import java.util.Scanner;
 
 /**
  *
@@ -12,14 +11,14 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    
+    FiladeAtendimento fila = new FiladeAtendimento();
+    HistoricoAtendimentos historico = new HistoricoAtendimentos();
+    Paciente p = new Paciente("nome", 0, "sintoma");
+    
         
         Paciente p1 = new Paciente("Marcos Vinicius", 19, "Alergia Hereditária");
         Paciente p2 = new  Paciente("Nathallya Adrovwski", 30, "Enxaqueca/Dor de Cabeça");
-        
-        System.out.println(p2.exibirInfo());
-        System.out.println(p1.exibirInfo());
     }
-        sc.close();
 }
 

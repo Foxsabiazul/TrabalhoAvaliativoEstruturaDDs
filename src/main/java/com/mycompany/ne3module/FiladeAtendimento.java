@@ -18,15 +18,18 @@ public class FiladeAtendimento {
     }
     
     public void adicionarPaciente(Paciente p){
-        fila.addLast(p);
+        this.fila.addLast(p);
     }
     
     public Paciente atenderPaciente(){
             if(!fila.isEmpty()){
             return fila.removeFirst();
-        }
-        return null; // verifica se a fila esta vazia; 
+        } else {
+                System.out.println("A fila está vazia");
+                return null; // verifica se a fila esta vazia;
+       }
     }
+    
     public boolean filaVazia(){
         return fila.isEmpty();
     }
@@ -36,9 +39,9 @@ public class FiladeAtendimento {
             System.out.println("A fila está vazia.");    
         }else{
             System.out.println("Fila de Atendimento: ");
-            for (Paciente p : fila){
+            for (Paciente p: fila){
+                p.exibirInfo();
             }
-            System.out.println(p.exibirInfo());
         }
     }
 }
