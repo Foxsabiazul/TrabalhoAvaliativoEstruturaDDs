@@ -36,7 +36,7 @@ class Paciente {
     public int getIdade(){
         return idade;
 }
-    
+     
 public String getSintoma(){
     return sintoma;
 }
@@ -44,7 +44,7 @@ public String getSintoma(){
     public void setNome(String nome) {
         this.nome = nome;
     }
-
+    
     public void setIdade(int idade) {
         this.idade = idade;
     }
@@ -52,7 +52,6 @@ public String getSintoma(){
     public void setSintoma(String sintoma) {
         this.sintoma = sintoma;
     }
-    
 }
 
 
