@@ -38,10 +38,12 @@ class Paciente {
 }
     public int getIdade(){
         return idade;
+
 }
      
 public String getSintoma(){
     return sintoma;
+
 }
     //setters
     public void setNome(String nome) {
@@ -57,6 +59,13 @@ public String getSintoma(){
     public void setSintoma(String sintoma) {
         this.sintoma = sintoma;
         
+    }
+    
+    public void exibirInfo(){
+        System.out.println("id" + id);
+        System.out.println("nome" + nome);
+        System.out.println("iadade" + idade);
+        System.out.println("sintomas" + sintoma);
     }
 }
 
